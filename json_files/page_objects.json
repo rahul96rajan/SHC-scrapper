@@ -8,5 +8,6 @@
     "print_SHC_link": "//td[./a[text()='Print']]/preceding-sibling::td[./a[text()='Print']]/a",
     "print_SHC_new_link": "//td[./a[text()='Print']]/following-sibling::td[./a[text()='Print']]/a",
     "additional_crops_link": "//a[text()='Additional Crops']",
-    "report_frame": "//iframe[contains(@src,'Report')]"
+    "report_frame": "//iframe[contains(@src,'Report')]",
+    "next_page": "//tr[@class='grid-footer']//a[contains(text(), 'Next')]"
 }
