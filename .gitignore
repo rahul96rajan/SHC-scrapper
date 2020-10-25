@@ -1,2 +1,3 @@
 .vscode
 crawledHtmls/
+crawler/__pycache__/
