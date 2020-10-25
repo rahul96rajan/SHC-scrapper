@@ -1,3 +1,4 @@
 {
-    "base_url": "https://soilhealth.dac.gov.in/HealthCard/HealthCard/HealthCardPNew"
+    "base_url": "https://soilhealth.dac.gov.in/HealthCard/HealthCard/HealthCardPNew",
+    "headless": "False"
 }
