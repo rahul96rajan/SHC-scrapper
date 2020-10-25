@@ -44,15 +44,15 @@ def read_json_files():
     return jsons
 
 
-def init_driver(headless, imp_wait):
+def init_driver(is_headless, imp_wait):
     """
     Initializes selenium webdriver with required options.
 
     Parameters
     ----------
-    headless (bool): Parameter stating whether weddriver should run headless
-                     or not. If passed True, driver runs headless and
-                     vice-versa. [Default is False]
+    is_headless (bool): Parameter stating whether weddriver should run headless
+                        or not. If passed True, driver runs headless and
+                        vice-versa. [Default is False]
 
     imp_wait (int): number of seconds webdriver implicitly wait for presence
                     of element. [Default is 10]
@@ -61,7 +61,7 @@ def init_driver(headless, imp_wait):
     driver (selenium.webdriver): webdriver(chrome) having the desired options.
     """
     options = Options()
-    if headless:
+    if is_headless:
         options.add_argument("--headless")
         print('[INFO] RUNNING HEADLESS')
     options.add_argument("--window-size=1920x1080")
@@ -116,6 +116,7 @@ def scrape_all_health_cards():
                             driver, state, dist, sub_dist, gram_panch, village)
                         web_actions.get_all_reports(driver)
     driver.quit()
+    print("[COMPLETED] All scrapped files are kept under 'crawled_htmls'")
 
 
 if __name__ == "__main__":
