@@ -5,8 +5,20 @@ import web_actions
 
 
 def read_json_files():
+    """
+    Reads json files under directory json_files.
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    jsons (dict): Dictionary holding content read from json files under
+                  directory `json_files`.
+    """
+
     jsons = dict()
-    """ Config File """
     with open('json_files/config.json') as file:
         data_conf = json.load(file)
         jsons['base_url'] = data_conf['base_url']
@@ -33,7 +45,21 @@ def read_json_files():
 
 
 def init_driver(headless, imp_wait):
-    """ Setting up selenium webdriver """
+    """
+    Initializes selenium webdriver with required options.
+
+    Parameters
+    ----------
+    headless (bool): Parameter stating whether weddriver should run headless
+                     or not. If passed True, driver runs headless and
+                     vice-versa. [Default is False]
+
+    imp_wait (int): number of seconds webdriver implicitly wait for presence
+                    of element. [Default is 10]
+    Returns
+    -------
+    driver (selenium.webdriver): webdriver(chrome) having the desired options.
+    """
     options = Options()
     if headless:
         options.add_argument("--headless")
@@ -47,6 +73,7 @@ def init_driver(headless, imp_wait):
 
 
 def _test():
+    # TO-DO: Temporary. To be removed once json files are fully populated.
     json_dicts = read_json_files()
     driver = init_driver(
         json_dicts['is_headless'], json_dicts['implicit_wait'])
@@ -58,6 +85,18 @@ def _test():
 
 
 def scrape_all_health_cards():
+    """
+    Scrapes the Soil Card for all possible combinations formed via data
+    populated under json files (under directory `json_files`). And stores the
+    scrapped html files under `crawled_htmls` directory.
+
+    Parameters
+    ----------
+    None
+    Returns
+    -------
+    None
+    """
     json_dicts = read_json_files()
     driver = init_driver(
         json_dicts['is_headless'], json_dicts['implicit_wait'])
