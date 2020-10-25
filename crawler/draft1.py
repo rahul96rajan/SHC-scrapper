@@ -1,7 +1,7 @@
 import json
 from selenium import webdriver
-from time import sleep
-from random import randint
+import time
+# from random import randint
 
 """ Config File """
 with open('json_files/config.json') as file:
@@ -27,25 +27,6 @@ with open('json_files/gram_panchayat.json') as file:
 with open('json_files/village.json') as file:
     dict_villages = json.load(file)
 
-""" ----------------------------------------  """
-
-
-"""" ----- ALPHA TEST ARENA ----"""
-print(
-    dict_villages[dict_gram_panchayats[dict_sub_districts[dict_districts[list_states[-1]][-1]][-1]][-1]][-1])
-""" ----------------------------------------  """
-
-t_state = list_states[-1]
-t_district = dict_districts[t_state][-1]
-t_sub_district = dict_sub_districts[t_district][-1]
-t_gram_panchayat = dict_gram_panchayats[t_sub_district][-1]
-t_village = dict_villages[t_gram_panchayat][-1]
-
-print(base_url)
-
-print("{0} > {1} > {2} > {3} > {4}".format(t_state, t_district, t_sub_district,
-                                           t_gram_panchayat, t_village))
-
 
 # For Chrome
 driver = webdriver.Chrome(executable_path="drivers/chromedriver")
@@ -56,19 +37,64 @@ driver.implicitly_wait(20)
 with open('json_files/page_objects.json') as file:
     page_objects = json.load(file)
 
-driver.find_element_by_xpath(page_objects["state_selection"].
-                             replace("$STATE$", t_state)).click()
-sleep(1)
-driver.find_element_by_xpath(page_objects["dist_selection"].
-                             replace("$DIST$", t_district)).click()
-sleep(1)
-driver.find_element_by_xpath(page_objects["sub_dis_selection"].
-                             replace("$SUB_DIS$", t_sub_district)).click()
-sleep(1)
-driver.find_element_by_xpath(page_objects["gram_panchayat_selection"].
-                             replace("$GRAMPANCHAYAT$", t_gram_panchayat)).click()
-sleep(1)
-driver.find_element_by_xpath(page_objects["village_selection"].
-                             replace("$VILLAGE$", t_village)).click()
-sleep(1)
-driver.find_element_by_xpath(page_objects["search_button"]).click()
+
+def search_with_filters(state, dist, subdist, grampanch, village):
+    driver.find_element_by_xpath(page_objects["state_selection"].
+                                 replace("$STATE$", state)).click()
+    time.sleep(1)
+    driver.find_element_by_xpath(page_objects["dist_selection"].
+                                 replace("$DIST$", dist)).click()
+    time.sleep(1)
+    driver.find_element_by_xpath(page_objects["sub_dis_selection"].
+                                 replace("$SUB_DIS$", subdist)).click()
+    time.sleep(1)
+    driver.find_element_by_xpath(page_objects["gram_panchayat_selection"].
+                                 replace("$GRAMPANCHAYAT$", grampanch)).click()
+    time.sleep(1)
+    driver.find_element_by_xpath(page_objects["village_selection"].
+                                 replace("$VILLAGE$", village)).click()
+    time.sleep(1)
+    driver.find_element_by_xpath(page_objects["search_button"]).click()
+
+    print('[ACTION] Searched for filters %s' % (state + " > " + dist + " > " +
+                                                subdist + " > " + grampanch +
+                                                " > " + village))
+
+
+def get_SHC_New_list():
+    time.sleep(2)
+    return driver.find_elements_by_xpath(page_objects["print_SHC_new_link"])
+
+
+def save_frame():
+    js_script = "return window.frames[0].document.body.innerHTML"
+    report_content = driver.execute_script(js_script)
+    ts = time.time()
+    loc = "crawledHtmls/" + str(ts).replace('.', '_') + ".html"
+    with open(loc, "a") as file:
+        file.write(report_content)
+        print("[ACTION] Wrote report contents to --> '%s'" % loc)
+
+
+# def click_SHC_New_and_fetch_report():
+#     driver.find_element_by_xpath(page_objects["print_SHC_new_link"]).click()
+#     print('[ACTION] Clicked on SHC New')
+#     time.sleep(10)
+#     save_frame()
+
+def click_SHC_New_and_fetch_reports():
+    all_SN_print_links = get_SHC_New_list()
+    for i, SN_print in enumerate(all_SN_print_links):
+        SN_print.click()
+        print('[ACTION] Clicked on SHC New')
+        time.sleep(10)
+        save_frame()
+        print('[ACTION] Save report for result number %d' % (i+1))
+
+
+# search_with_filters(t_state, t_district, t_sub_district,
+#                     t_gram_panchayat, t_village)
+search_with_filters('Punjab', 'Bathinda', 'Bathinda',
+                    'BARKANDI', 'Warkandi (172)')
+
+click_SHC_New_and_fetch_reports()
