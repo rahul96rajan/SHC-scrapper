@@ -57,5 +57,28 @@ def _test():
     driver.quit()
 
 
+def scrape_all_health_cards():
+    json_dicts = read_json_files()
+    driver = init_driver(
+        json_dicts['is_headless'], json_dicts['implicit_wait'])
+    states = json_dicts['list_states']
+    dict_districts = json_dicts['dict_districts']
+    dict_sub_districts = json_dicts['dict_sub_districts']
+    dict_gram_panchayats = json_dicts['dict_gram_panchayats']
+    dict_villages = json_dicts['dict_villages']
+
+    for state in states:
+        for dist in dict_districts[state]:
+            for sub_dist in dict_sub_districts[dist]:
+                for gram_panch in dict_gram_panchayats[sub_dist]:
+                    for village in dict_villages[gram_panch]:
+                        driver.get(json_dicts['base_url'])
+                        web_actions.search_with_filters(
+                            driver, state, dist, sub_dist, gram_panch, village)
+                        web_actions.get_all_reports(driver)
+    driver.quit()
+
+
 if __name__ == "__main__":
     _test()
+    # scrape_all_health_cards()
