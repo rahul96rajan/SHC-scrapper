@@ -21,5 +21,5 @@ Inputs Paramenters for the Model(s) (listed in the order of priority from highes
 
 * A merely Acceptable Dataset found [here](https://data.gov.in/catalog/district-wise-season-wise-crop-production-statistics?filters%5Bfield_catalog_reference%5D=87631&format=json&offset=0&limit=6&sort%5Bcreated%5D=desc)
     * Drawbacks
-        * Very limited number of dimentions(features)
+        * Very less number of dimentions(features)
         * Amiguity arises as Dataset's info says data is from 1997 but dataset iteslf has records from 2000-2014. ***Assuming** that the decision to start collecting was conceptualized in 1997.*
