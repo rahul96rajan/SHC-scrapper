@@ -6,12 +6,32 @@ import time
 from selenium.common.exceptions import NoSuchElementException
 
 with open('json_files/page_objects.json') as file:
-    """" Loading locators for page objects from json_files/page_objects.json
-         And storing it to gloabl object 'page_objects'. """
+    """"
+    Loads locators for page objects from `json_files/page_objects.json`,
+    and stores it to gloabl variable 'page_objects' (dict).
+    """
     page_objects = json.load(file)
 
 
 def search_with_filters(driver, state, dist, subdist, grampanch, village):
+    """
+    Selects the given parameter in the respective dropdown fields and hits
+    search button.
+
+    Parameters
+    ----------
+    driver (selenium.webdriver): driver on which the actions are to be
+                                 performed.
+    state (str): name of state to be selected.
+    dist (str): name of district to be selected.
+    subdist (str): name of sub-district to be selected.
+    grampanch (str): name of gram-panchayat to be selected.
+    village (str): name of village to be selected.
+
+    Returns
+    -------
+    None
+    """
     driver.find_element_by_xpath(page_objects["state_selection"].
                                  replace("$STATE$", state)).click()
     time.sleep(1)
@@ -35,11 +55,35 @@ def search_with_filters(driver, state, dist, subdist, grampanch, village):
 
 
 def get_SHC_New_list(driver):
+    """
+    Fetches the list of Print links under SHC New columns.
+
+    Parameters
+    ----------
+    driver (selenium.webdriver): driver on which the actions are to be
+                                 performed.
+    Returns
+    -------
+    list_of_links (list): list of webelements containing all print links.
+    """
     time.sleep(2)
-    return driver.find_elements_by_xpath(page_objects["print_SHC_new_link"])
+    list_of_links = driver.find_elements_by_xpath(
+        page_objects["print_SHC_new_link"])
+    return list_of_links
 
 
 def save_frame(driver):
+    """
+    Saves the Soil health card frame as html file under `crawledHtmls`.
+
+    Parameters
+    ----------
+    driver (selenium.webdriver): driver on which the actions are to be
+                                 performed.
+    Returns
+    -------
+    None
+    """
     js_script = "return window.frames[0].document.body.innerHTML"
     report_content = driver.execute_script(js_script)
     ts = time.time()
@@ -50,6 +94,18 @@ def save_frame(driver):
 
 
 def click_SHC_New_and_fetch_reports(driver):
+    """
+    Clicks on print tag under SHC new and saves the Soil health card frame as
+    html file under `crawledHtmls`.
+
+    Parameters
+    ----------
+    driver (selenium.webdriver): driver on which the actions are to be
+                                 performed.
+    Returns
+    -------
+    None
+    """
     all_SN_print_links = get_SHC_New_list(driver)
     for i, SN_print in enumerate(all_SN_print_links):
         SN_print.click()
@@ -60,6 +116,20 @@ def click_SHC_New_and_fetch_reports(driver):
 
 
 def get_all_reports(driver):
+    """
+    One-by-One navigates through the pages of the search results; and clicks
+    on print tag under SHC new columns. Saves the Soil health card frame as
+    html file. And hence, saving all the SHC for the search
+    results under `crawledHtmls`.
+
+    Parameters
+    ----------
+    driver (selenium.webdriver): driver on which the actions are to be
+                                 performed.
+    Returns
+    -------
+    None
+    """
     flag = True
     counter = 1
     while flag:
