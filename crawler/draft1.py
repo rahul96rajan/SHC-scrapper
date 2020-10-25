@@ -1,6 +1,7 @@
 import json
 from selenium import webdriver
 import time
+from selenium.common.exceptions import NoSuchElementException
 # from random import randint
 
 """ Config File """
@@ -97,4 +98,22 @@ def click_SHC_New_and_fetch_reports():
 search_with_filters('Punjab', 'Bathinda', 'Bathinda',
                     'BARKANDI', 'Warkandi (172)')
 
-click_SHC_New_and_fetch_reports()
+# click_SHC_New_and_fetch_reports()
+
+
+def get_all_reports():
+    flag = True
+    counter = 1
+    while flag:
+        try:
+            print("[INFO] On page number : ", counter)
+            click_SHC_New_and_fetch_reports()
+            driver.find_element_by_xpath(page_objects["next_page"]).click()
+            counter += 1
+            time.sleep(1)
+        except NoSuchElementException:
+            print("[INFO] Reached on the last page")
+            flag = False
+
+
+get_all_reports()
