@@ -93,6 +93,7 @@ def scrape_all_health_cards():
     Parameters
     ----------
     None
+
     Returns
     -------
     None
