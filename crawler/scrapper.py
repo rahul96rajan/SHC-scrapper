@@ -23,6 +23,7 @@ def read_json_files():
         data_conf = json.load(file)
         jsons['base_url'] = data_conf['base_url']
         jsons['implicit_wait'] = data_conf['implicit_wait']
+        jsons['os'] = data_conf['os']
         jsons['is_headless'] = (data_conf['headless'] == 'True')
 
     with open('json_files/state.json') as file:
@@ -44,7 +45,19 @@ def read_json_files():
     return jsons
 
 
-def init_driver(is_headless, imp_wait):
+def get_driver_path(os):
+    if os.lower() == 'linux':
+        return "drivers/chromedriver86linux"
+    elif os.lower() == 'mac':
+        return "drivers/chromedriver86mac"
+    elif os.lower() == 'window':
+        return "drivers/chromedriver86win.exe"
+    else:
+        raise Exception(
+            "OS should be linux/mac/window in config.json but found : %s" % os)
+
+
+def init_driver(is_headless, imp_wait, chrome_driver_path):
     """
     Initializes selenium webdriver with required options.
 
@@ -65,7 +78,6 @@ def init_driver(is_headless, imp_wait):
         options.add_argument("--headless")
         print('[INFO] RUNNING HEADLESS')
     options.add_argument("--window-size=1920x1080")
-    chrome_driver_path = "drivers/chromedriver"
     driver = webdriver.Chrome(chrome_options=options,
                               executable_path=chrome_driver_path)
     driver.implicitly_wait(imp_wait)
@@ -75,8 +87,9 @@ def init_driver(is_headless, imp_wait):
 def _test():
     # TO-DO: Temporary. To be removed once json files are fully populated.
     json_dicts = read_json_files()
+    driver_path = get_driver_path(json_dicts['os'])
     driver = init_driver(
-        json_dicts['is_headless'], json_dicts['implicit_wait'])
+        json_dicts['is_headless'], json_dicts['implicit_wait'], driver_path)
     driver.get(json_dicts['base_url'])
     web_actions.search_with_filters(
         driver, 'Punjab', 'Bathinda', 'Bathinda', 'BARKANDI', 'Warkandi (172)')
@@ -99,8 +112,9 @@ def scrape_all_health_cards():
     None
     """
     json_dicts = read_json_files()
+    driver_path = get_driver_path(json_dicts['os'])
     driver = init_driver(
-        json_dicts['is_headless'], json_dicts['implicit_wait'])
+        json_dicts['is_headless'], json_dicts['implicit_wait'], driver_path)
     states = json_dicts['list_states']
     dict_districts = json_dicts['dict_districts']
     dict_sub_districts = json_dicts['dict_sub_districts']
