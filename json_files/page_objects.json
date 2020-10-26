@@ -1,0 +1,13 @@
+{
+    "state_selection" : "//select[contains(@id, 'State')]/option[text()='$STATE$']",
+    "dist_selection": "//select[contains(@id, 'Dist')]/option[text()='$DIST$']",
+    "sub_dis_selection" : "//select[contains(@id, 'Sub_dis')]/option[text()='$SUB_DIS$']",
+    "gram_panchayat_selection": "//select[contains(@id, 'GramPanchyat')]/option[text()='$GRAMPANCHAYAT$']",
+    "village_selection": "//select[contains(@id, 'village')]/option[text()='$VILLAGE$']",
+    "search_button": "//a[./img[contains(@src,'search')]]",
+    "print_SHC_link": "//td[./a[text()='Print']]/preceding-sibling::td[./a[text()='Print']]/a",
+    "print_SHC_new_link": "//td[./a[text()='Print']]/following-sibling::td[./a[text()='Print']]/a",
+    "additional_crops_link": "//a[text()='Additional Crops']",
+    "report_frame": "//iframe[contains(@src,'Report')]",
+    "next_page": "//tr[@class='grid-footer']//a[contains(text(), 'Next')]"
+}
