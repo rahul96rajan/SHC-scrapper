@@ -1,6 +1,138 @@
 {
+    "Great Nicobar": [
+        "GOVINDNAGAR",
+        "LAXMINAGAR"
+    ],
+    "Diglipur": [
+        "DIGLIPUR",
+        "KALIGHAT",
+        "KERALAPURAM",
+        "MADHUPUR",
+        "NABAGRAM",
+        "R.K. GRAM",
+        "RADHANAGAR",
+        "RAMNAGAR",
+        "SHIBPUR",
+        "SITANAGAR",
+        "SUBASHGRAM"
+    ],
+    "Mayabunder": [
+        "BASANTIPUR",
+        "CHAINPUR",
+        "HARINAGAR",
+        "MAYABUNDER",
+        "PAHALGAON",
+        "POKADERA",
+        "RAMPUR",
+        "SWADESHNAGAR"
+    ],
+    "Rangat": [
+        "BAKULTALA",
+        "DASHRATPUR",
+        "KADAMTALA",
+        "KAUSALYANAGAR",
+        "NILAMBUR",
+        "NIMBUTALA",
+        "PARNASALA",
+        "RANGAT",
+        "SABRI",
+        "SHIVAPURAM",
+        "SUNDERGHAR",
+        "URMILAPUR",
+        "UTTARA"
+    ],
+    "Ferrargunj": [
+        "BRINDRABAN",
+        "CHOULDARI",
+        "COLLINPUR",
+        "FERRARGUNJ",
+        "GUPTAPARA",
+        "HUMFREYGUNJ",
+        "MANNARGHAT",
+        "MITHAKHARI",
+        "NAMUNAGHAR",
+        "SHOAL BAY",
+        "STEWARTGUNJ",
+        "TUSHNABAD",
+        "WANDOOR",
+        "WIMBERLYGUNJ"
+    ],
+    "Little Andaman": [
+        "NETAJINAGAR",
+        "Rabindranagar",
+        "RAMKRISHNAPUR",
+        "VIVEKANANDAPUR"
+    ],
+    "Port Blair": [
+        "BEODNABAD",
+        "Calicut",
+        "GOVINDNAGAR",
+        "NEIL ISLAND",
+        "SHYAMNAGAR",
+        "SIPPIGHAT"
+    ],
+    "Chaglagam Circle": [
+        "CHAGLONGAM",
+        "MAILIANG"
+    ],
+    "Goiliang Circle": [
+        "DANGLAT"
+    ],
+    "Hawai HQ": [
+        "HALAIKRONG",
+        "MECHONG",
+        "SHIRONG",
+        "TAMBLU",
+        "WALLA",
+        "WATONG"
+    ],
+    "Hayuliang ADC": [
+        "AMLIANG",
+        "HAYULIANG",
+        "LAMKONG-MACHIMA",
+        "MOHIKONG",
+        "TAFRALIANG"
+    ],
+    "Kibithoo Circle": [
+        "KIBITHOO",
+        "Musai",
+        "Yakung"
+    ],
+    "Manchal Circle": [
+        "PANGUNG",
+        "TEHULIANG",
+        "YATONG"
+    ],
+    "Metengliang Circle": [
+        "HAMALIANG",
+        "KROMNA",
+        "MATENGLIANG",
+        "ROILIANG"
+    ],
+    "Walong Circle": [
+        "WALONG"
+    ],
+    "Bordumsa": [
+        "GIDDING",
+        "GOJU",
+        "KHEREMPANI",
+        "RAJANAGAR-I",
+        "WAGUN-I"
+    ],
+    "Anelih": [
+        "ANELIH"
+    ],
+    "Anini": [
+        "ANINI-II",
+        "MATOLI"
+    ],
+    "Etalin": [
+        "ANGULIN",
+        "ETALIN BRIDGE POINT",
+        "MALINYE",
+        "NEW AROPO"
+    ],
     "": [],
-
     "Santuri": [
         "BALITORA",
         "GARSIKA",
