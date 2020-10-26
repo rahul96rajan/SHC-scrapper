@@ -1,8 +1,422 @@
 {
-    "SANTURI": [
-        
+    "GOVINDNAGAR": [
+        "Govinda Nagar"
     ],
-
+    "LAXMINAGAR": [
+        "Gandhi Nagar",
+        "Joginder Nagar",
+        "Laxmi Nagar",
+        "Sastri Nagar",
+        "Vijoy Nagar"
+    ],
+    "DIGLIPUR": [
+        "Diglipur Part-II",
+        "Khudirampur (Rv)",
+        "Rahil (Fdca)"
+    ],
+    "KALIGHAT": [
+        "Kalighat (Rv)"
+    ],
+    "KERALAPURAM": [
+        "Keralapuram (Rv)",
+        "Vidyasagarpalli (Rv)"
+    ],
+    "MADHUPUR": [
+        "Deshbandhugram (Rv)",
+        "Madhupur (Rv)",
+        "Rabindrapalli (Rv)"
+    ],
+    "NABAGRAM": [
+        "Madhyamgram (Rv)",
+        "Nabagram (Rv)"
+    ],
+    "R.K. GRAM": [
+        "Ramakrishnagram (Rv)"
+    ],
+    "RADHANAGAR": [
+        "Radha Nagar (Rv)",
+        "Shyam Nagar",
+        "Shyam Nagar (Rv)",
+        "Swarajgram (Rv)"
+    ],
+    "RAMNAGAR": [
+        "Ramnagar (Rv)"
+    ],
+    "SHIBPUR": [
+        "Durgapur (Rv)",
+        "Kalipur (Rv)",
+        "Shibpur (Rv)"
+    ],
+    "SITANAGAR": [
+        "Sitanagar (Rv)"
+    ],
+    "SUBASHGRAM": [
+        "Subhashgram (Rv)"
+    ],
+    "BASANTIPUR": [
+        "Basantipur (Rv)",
+        "Govindpur (Rv)",
+        "Paresh Nagar (Rv)",
+        "Profullya Nagar (Rv)"
+    ],
+    "CHAINPUR": [
+        "Chainpur (Rv)",
+        "Pudumadurai (Rv)"
+    ],
+    "HARINAGAR": [
+        "Harinagar (Rv)",
+        "Jaipur (Rv)",
+        "Kamalapur (Rv)",
+        "Pinakinagar (Rv)"
+    ],
+    "MAYABUNDER": [
+        "Bajato (Efa & 40 Acre Plot)",
+        "Karmatang X (Efa) Incl.Bihari Plot (Efa)",
+        "Mayabunder (Rv)",
+        "Shippi Tikry (Efa)"
+    ],
+    "PAHALGAON": [
+        "Pahalgaon (Rv)",
+        "Tugapur (Rv)"
+    ],
+    "POKADERA": [
+        "Danpur (Rv)",
+        "Pokadera (Rv)"
+    ],
+    "RAMPUR": [
+        "Devpur (Rv)",
+        "Karmatang (Rv)",
+        "Lataw (Rv)",
+        "Lucknow (Rv)",
+        "Rampur (Rv)",
+        "Webi (Rv)"
+    ],
+    "SWADESHNAGAR": [
+        "Dukennagar (Rv)",
+        "Santipur (Rv)",
+        "Swadesh Nagar (Rv)"
+    ],
+    "BAKULTALA": [
+        "Bakultala (Ct)",
+        "Shyamkund (Rv)"
+    ],
+    "DASHRATPUR": [
+        "Desharatpur (Rv)",
+        "Janakpur (Rv)",
+        "Mithila (Rv)",
+        "Sitapur (Rv)"
+    ],
+    "KADAMTALA": [
+        "Kadamtala (Rv)"
+    ],
+    "KAUSALYANAGAR": [
+        "Kaushalyanagar (Rv)",
+        "Saktigarh (Rv)"
+    ],
+    "NILAMBUR": [
+        "Abaygarh (Rv)",
+        "Kanchangarh (Rv)",
+        "Khatta Khari (Rv)",
+        "Nayagarh (Rv)",
+        "Raglachang (Rv)",
+        "Rajatgarh (Rv)",
+        "Wrafter's Creek (Rv)"
+    ],
+    "NIMBUTALA": [
+        "Amkunj (Rv)",
+        "Nimbutala (Rv)"
+    ],
+    "PARNASALA": [
+        "Rampur (Rv)"
+    ],
+    "RANGAT": [
+        "Rangat (Rv)"
+    ],
+    "SABRI": [
+        "Bharatpur (Rv)",
+        "Sabari (Rv)",
+        "Vishnupur (Rv)"
+    ],
+    "SHIVAPURAM": [
+        "Dharmapur (Rv)",
+        "Padmanabhapuram (Rv)",
+        "Ramachandra Nagar (Rv)",
+        "Shivapuram (Rv)",
+        "Thiruvanchikulam (Rv)"
+    ],
+    "SUNDERGHAR": [
+        "Adojig (Rv) (Including Efa)"
+    ],
+    "URMILAPUR": [
+        "Kalsi (Rv)",
+        "Laxmanpur (Rv)",
+        "Urmilapur (Rv)"
+    ],
+    "UTTARA": [
+        "Santanu (Rv)",
+        "Uttara (Rv)"
+    ],
+    "BRINDRABAN": [
+        "Alipur (Rv)",
+        "Bindraban (Rv)",
+        "Kadakachang (Rv)",
+        "Mathura (Rv)"
+    ],
+    "CHOULDARI": [
+        "Badmash Pahar (Rv)",
+        "Chouldari (Rv)",
+        "Craikabad (Rv)",
+        "Port Mouat (Rv)"
+    ],
+    "COLLINPUR": [
+        "Colinpur (Rv)",
+        "Herbertabad (Rv)",
+        "Manpur (Rv)",
+        "Temple Myo (Rv)",
+        "Tirur (Rv)"
+    ],
+    "FERRARGUNJ": [
+        "Aniket (Rv)",
+        "Caddlegunj (Rv) (Incl. Sona Pahar & Hazari Bagh (Jppc)",
+        "Ferrargunj (Rv)",
+        "Hashmatabad (Efa)",
+        "Manglutan (Efa)",
+        "Mile Tilek  (Jppc)",
+        "Mile Tilek (Rv) & Mile Tilek (Efa)",
+        "Tirur (Ja)"
+    ],
+    "GUPTAPARA": [
+        "Guptapara (Rv)",
+        "Manglutan (Rv)",
+        "Manjeri (Rv) & Line Dera (Fc)",
+        "Nayashahar (Rv)"
+    ],
+    "HUMFREYGUNJ": [
+        "Dhanikhari (Rv)",
+        "Homfreygunj (Rv)"
+    ],
+    "MANNARGHAT": [
+        "Malapuram (Rv)",
+        "Mannarghat (Rv)",
+        "Wright Myo (Rv)"
+    ],
+    "MITHAKHARI": [
+        "Mithakhari (Rv)",
+        "Ograbraij (Rv)"
+    ],
+    "NAMUNAGHAR": [
+        "Dundas Point (Rv)",
+        "Namunaghar (Rv)"
+    ],
+    "SHOAL BAY": [
+        "Maymyo (Efa)",
+        "Shoal Bay (Rv)"
+    ],
+    "STEWARTGUNJ": [
+        "Govindapuram (Rv)",
+        "Stewartgunj (Rv)"
+    ],
+    "TUSHNABAD": [
+        "Hobdipur (Rv)",
+        "Tusnabad (Rv)"
+    ],
+    "WANDOOR": [
+        "Hashmatabad (Rv)",
+        "Maymyo (Rv)",
+        "Wandur (Rv)"
+    ],
+    "WIMBERLYGUNJ": [
+        "Wimberlygunj (Rv)"
+    ],
+    "NETAJINAGAR": [
+        "Netaji Nagar (Rv)"
+    ],
+    "Rabindranagar": [
+        "Rabindra Nagar (Rv)"
+    ],
+    "RAMKRISHNAPUR": [
+        "Ramakrishnapur (Rv)"
+    ],
+    "VIVEKANANDAPUR": [
+        "Vivekanandapuram (Rv)"
+    ],
+    "BEODNABAD": [
+        "Bada Nallaha/Bada Balu (Efa)",
+        "Beadnabad (Rv)",
+        "Chidiyatapu (Rv)",
+        "Munda Pahar (Efa)",
+        "Rangachang (Rv)",
+        "Rutland (Rv)"
+    ],
+    "Calicut": [
+        "Calicut (Rv)"
+    ],
+    "NEIL ISLAND": [
+        "Bharatpur (Rv)",
+        "Lakshmanpur (Rv)",
+        "Neil Kendra (Rv)",
+        "Ram Nagar (Rv)",
+        "Sitapur (Rv)"
+    ],
+    "SHYAMNAGAR": [
+        "Krishna Nagar (Rv)",
+        "Radha Nagar (Rv)"
+    ],
+    "SIPPIGHAT": [
+        "Bimilitan (Rv) & Kodiyaghat",
+        "Sippighat (Rv)",
+        "Teylorabad (Rv)"
+    ],
+    "CHAGLONGAM": [
+        "Abohagam",
+        "Kaey Maro",
+        "Tegamna"
+    ],
+    "MAILIANG": [
+        "Chipra"
+    ],
+    "DANGLAT": [
+        "Danglat",
+        "Kanguliang",
+        "Rittiliang"
+    ],
+    "HALAIKRONG": [
+        "Halaikrong",
+        "Surung",
+        "Tulung Kunung"
+    ],
+    "MECHONG": [
+        "Mongakhong",
+        "Sung"
+    ],
+    "SHIRONG": [
+        "Bhaw"
+    ],
+    "TAMBLU": [
+        "Kritong"
+    ],
+    "WALLA": [
+        "Chungung",
+        "Ngi"
+    ],
+    "WATONG": [
+        "Kamdi",
+        "Watong"
+    ],
+    "AMLIANG": [
+        "Amliang"
+    ],
+    "HAYULIANG": [
+        "Chameliang",
+        "Hayuliang",
+        "Mele",
+        "Nenuliang"
+    ],
+    "LAMKONG-MACHIMA": [
+        "Dingliang",
+        "Paya"
+    ],
+    "MOHIKONG": [
+        "Chingraliang",
+        "Mahikong",
+        "Naraliang"
+    ],
+    "TAFRALIANG": [
+        "Chunga",
+        "Khupa Village(Khupaliang)",
+        "Matiliang",
+        "Tafraliang"
+    ],
+    "KIBITHOO": [
+        "Kundan",
+        "Musai",
+        "Yakung"
+    ],
+    "PANGUNG": [
+        "Dhanbari",
+        "Gab",
+        "Holongong",
+        "Palang",
+        "Pangung"
+    ],
+    "TEHULIANG": [
+        "Tehuliang"
+    ],
+    "YATONG": [
+        "Plongnung",
+        "Plongri",
+        "Plotong"
+    ],
+    "HAMALIANG": [
+        "Hamangko"
+    ],
+    "KROMNA": [
+        "Chipuiliang",
+        "Kromna",
+        "Taimna"
+    ],
+    "MATENGLIANG": [
+        "Mithumna"
+    ],
+    "ROILIANG": [
+        "Bomla",
+        "Roiliang",
+        "Tarafliang"
+    ],
+    "WALONG": [
+        "Dong",
+        "Supkung",
+        "Tinai",
+        "Walong",
+        "Warti"
+    ],
+    "GIDDING": [
+        "Gidding",
+        "Gidding Balijan",
+        "Podumoni"
+    ],
+    "GOJU": [
+        "Goju"
+    ],
+    "KHEREMPANI": [
+        "Kherempani"
+    ],
+    "RAJANAGAR-I": [
+        "Rajanagar - I"
+    ],
+    "WAGUN-I": [
+        "Wagun - I"
+    ],
+    "ANELIH": [
+        "Anelih H.Q."
+    ],
+    "ANINI-II": [
+        "Karu"
+    ],
+    "MATOLI": [
+        "Eyongo",
+        "Kadeli"
+    ],
+    "ANGULIN": [
+        "Angolin",
+        "Aprunli",
+        "Arunli"
+    ],
+    "ETALIN BRIDGE POINT": [
+        "Aningo"
+    ],
+    "MALINYE": [
+        "Akhuli",
+        "Apanli",
+        "Aruli",
+        "Athunli",
+        "Maliney"
+    ],
+    "NEW AROPO": [
+        "Aunli",
+        "Punli"
+    ],
+    "SANTURI": [],
     "TARABARI": [
         "",
         "Tarabari"

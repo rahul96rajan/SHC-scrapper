@@ -1,11 +1,41 @@
 {
+    "Nicobars": [
+        "Great Nicobar"
+    ],
+    "North And Middle Andaman": [
+        "Diglipur",
+        "Mayabunder",
+        "Rangat"
+    ],
+    "South Andamans": [
+        "Ferrargunj",
+        "Little Andaman",
+        "Port Blair"
+    ],
+    "Anjaw": [
+        "Chaglagam Circle",
+        "Goiliang Circle",
+        "Hawai HQ",
+        "Hayuliang ADC",
+        "Kibithoo Circle",
+        "Manchal Circle",
+        "Metengliang Circle",
+        "Walong Circle"
+    ],
+    "Changlang": [
+        "Bordumsa"
+    ],
+    "Dibang Valley": [
+        "Anelih",
+        "Anini",
+        "Etalin"
+    ],
     "PASCHIM BARDHAMAN": [
         "",
         ""
     ],
-
     "Purulia": [
-        "", 
+        "",
         "Raghunathpur - I",
         "Raghunathpur - Ii",
         "Santuri"

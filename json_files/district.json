@@ -1,8 +1,18 @@
 {
+    "Andaman And Nicobar Islands": [
+        "Nicobars",
+        "North And Middle Andaman",
+        "South Andamans"
+    ],
+    "Arunachal Pradesh": [
+        "Anjaw",
+        "Changlang",
+        "Dibang Valley"
+    ],
     "Tripura": [
         ""
     ],
-    "West Bengal" : [
+    "West Bengal": [
         "24 Paraganas North",
         "24 Paraganas South",
         "Alipurduar",
