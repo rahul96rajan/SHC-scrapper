@@ -134,6 +134,41 @@ def scrape_all_health_cards():
     print("[COMPLETED] All scrapped files are kept under 'crawled_htmls'")
 
 
+def dry_run_combination():
+    """
+    [MAINLY TO VALIDATE ROBUSTNESS JSON FILE VALUES]
+    Prints the possible combinations of states, districts, sub-districts,
+    gram-panchayats and village.
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    None
+    """
+    json_dicts = read_json_files()
+    states = json_dicts['list_states']
+    dict_districts = json_dicts['dict_districts']
+    dict_sub_districts = json_dicts['dict_sub_districts']
+    dict_gram_panchayats = json_dicts['dict_gram_panchayats']
+    dict_villages = json_dicts['dict_villages']
+
+    count = 0
+    for state in states:
+        for dist in dict_districts[state]:
+            for sub_dist in dict_sub_districts[dist]:
+                for gram_panch in dict_gram_panchayats[sub_dist]:
+                    for village in dict_villages[gram_panch]:
+                        count += 1
+                        print("{0} :: {1} > {2} > {3} > {4} > {5}".format(
+                            count, state, dist, sub_dist, gram_panch, village))
+
+    print("[COMPLETED] Total number of combinations :: %d" % count)
+
+
 if __name__ == "__main__":
-    _test()
+    # _test()
     # scrape_all_health_cards()
+    dry_run_combination()
