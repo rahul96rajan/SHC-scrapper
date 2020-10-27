@@ -1,6 +1,6 @@
 {
     "base_url": "https://soilhealth.dac.gov.in/HealthCard/HealthCard/HealthCardPNew",
-    "headless": "False",
+    "headless": "True",
     "implicit_wait": 20,
-    "os": "linux"
+    "os": "window"
 }
