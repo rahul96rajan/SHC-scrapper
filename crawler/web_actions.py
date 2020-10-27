@@ -34,19 +34,19 @@ def search_with_filters(driver, state, dist, subdist, grampanch, village):
     """
     driver.find_element_by_xpath(page_objects["state_selection"].
                                  replace("$STATE$", state)).click()
-    time.sleep(1)
+    # time.sleep(1)
     driver.find_element_by_xpath(page_objects["dist_selection"].
                                  replace("$DIST$", dist)).click()
-    time.sleep(1)
+    # time.sleep(1)
     driver.find_element_by_xpath(page_objects["sub_dis_selection"].
                                  replace("$SUB_DIS$", subdist)).click()
-    time.sleep(1)
+    # time.sleep(1)
     driver.find_element_by_xpath(page_objects["gram_panchayat_selection"].
                                  replace("$GRAMPANCHAYAT$", grampanch)).click()
-    time.sleep(1)
+    # time.sleep(1)
     driver.find_element_by_xpath(page_objects["village_selection"].
                                  replace("$VILLAGE$", village)).click()
-    time.sleep(1)
+    # time.sleep(1)
     driver.find_element_by_xpath(page_objects["search_button"]).click()
 
     print('[ACTION] Searched for filters %s' % (state + " > " + dist + " > " +
@@ -110,7 +110,7 @@ def click_SHC_New_and_fetch_reports(driver):
     for i, SN_print in enumerate(all_SN_print_links):
         SN_print.click()
         print('[ACTION] Clicked on SHC New')
-        time.sleep(10)
+        time.sleep(20)
         save_frame(driver)
         print('[ACTION] Save report for result number %d' % (i+1))
 

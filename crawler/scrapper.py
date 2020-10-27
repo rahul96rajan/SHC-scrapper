@@ -2,6 +2,7 @@ import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import web_actions
+import time
 
 
 def read_json_files():
@@ -84,7 +85,8 @@ def init_driver(is_headless, imp_wait, chrome_driver_path):
     return driver
 
 
-def _test():
+def _test(pageNo=0):
+    # pageNo (int): Page number from where to run. Default is 0, i.e; no skips
     # TO-DO: Temporary. To be removed once json files are fully populated.
     json_dicts = read_json_files()
     driver_path = get_driver_path(json_dicts['os'])
@@ -92,7 +94,14 @@ def _test():
         json_dicts['is_headless'], json_dicts['implicit_wait'], driver_path)
     driver.get(json_dicts['base_url'])
     web_actions.search_with_filters(
-        driver, 'Punjab', 'Bathinda', 'Bathinda', 'BARKANDI', 'Warkandi (172)')
+        driver, 'Andaman And Nicobar Islands', 'North And Middle Andaman',
+        'Diglipur', 'R.K. GRAM', 'Ramakrishnagram (Rv)')
+
+    # For loop utilized to make page skips.
+    xpth = "//tr[@class='grid-footer']//a[contains(text(),'Next')]"
+    for i in range(pageNo):
+        driver.find_element_by_xpath(xpth).click()
+        time.sleep(2)
     web_actions.get_all_reports(driver)
     driver.quit()
 
@@ -121,12 +130,15 @@ def scrape_all_health_cards():
     dict_gram_panchayats = json_dicts['dict_gram_panchayats']
     dict_villages = json_dicts['dict_villages']
 
+    count = 0
     for state in states:
         for dist in dict_districts[state]:
             for sub_dist in dict_sub_districts[dist]:
                 for gram_panch in dict_gram_panchayats[sub_dist]:
                     for village in dict_villages[gram_panch]:
+                        count += 1
                         driver.get(json_dicts['base_url'])
+                        print(">>>> COMBINATION NO :: %d <<<<" % count)
                         web_actions.search_with_filters(
                             driver, state, dist, sub_dist, gram_panch, village)
                         web_actions.get_all_reports(driver)
